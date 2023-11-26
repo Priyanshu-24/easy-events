@@ -1,5 +1,6 @@
 import "./globals.css";
 
+import { ClerkProvider } from "@clerk/nextjs";
 import type { Metadata } from "next";
 import UILibProvider from "@/providers/UILibProvider";
 
@@ -14,10 +15,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body>
-        <UILibProvider>{children}</UILibProvider>
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+        <body>
+          <UILibProvider>{children}</UILibProvider>
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
