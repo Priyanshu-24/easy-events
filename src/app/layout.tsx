@@ -1,6 +1,7 @@
 import "./globals.css";
 
 import type { Metadata } from "next";
+import UILibProvider from "@/providers/UILibProvider";
 
 export const metadata: Metadata = {
   title: "Easy Events",
@@ -14,7 +15,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <UILibProvider>{children}</UILibProvider>
+      </body>
     </html>
   );
 }
