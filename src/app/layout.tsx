@@ -1,6 +1,7 @@
 import "./globals.css";
 
 import { ClerkProvider } from "@clerk/nextjs";
+import LayoutProvider from "@/providers/LayoutProvider";
 import type { Metadata } from "next";
 import UILibProvider from "@/providers/UILibProvider";
 
@@ -18,7 +19,9 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <body>
-          <UILibProvider>{children}</UILibProvider>
+          <UILibProvider>
+            <LayoutProvider>{children}</LayoutProvider>
+          </UILibProvider>
         </body>
       </html>
     </ClerkProvider>
