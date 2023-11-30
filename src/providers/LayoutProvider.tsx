@@ -12,13 +12,17 @@ import { UserButton } from "@clerk/nextjs";
 
 const LayoutProvider = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="bg-gray-200 h-screen lg:px-20 px-5">
-      <div className="flex justify-between items-center bg-white p-4 shadow">
-        <h1 className="text-xl font-semibold text-gray-600">EASY EVENTS</h1>
+    <div className="bg-[#e0fbfc] h-screen lg:px-20 px-5">
+      <div className="flex justify-between items-center bg-[#3d5a80] p-4 shadow-xl">
+        <h1 className="text-xl font-semibold text-[#ffffff]">EASY EVENTS</h1>
         <div className="flex gap-5 items-center">
           <Dropdown size="sm">
             <DropdownTrigger>
-              <Button variant="bordered" radius="none">
+              <Button
+                variant="bordered"
+                radius="none"
+                className="text-[#ffffff]"
+              >
                 Profile
               </Button>
             </DropdownTrigger>
@@ -28,7 +32,8 @@ const LayoutProvider = ({ children }: { children: React.ReactNode }) => {
               <DropdownItem key="edit">Edit file</DropdownItem>
             </DropdownMenu>
           </Dropdown>
-          <UserButton />
+
+          <UserButton afterSignOutUrl="/" />
         </div>
       </div>
       <div>{children}</div>

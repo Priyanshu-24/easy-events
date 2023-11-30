@@ -1,12 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Open+Sans&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Hedvig+Letters+Sans&display=swap");
 * {
-  font-family: "Montserrat", sans-serif !important;
+  font-family: "Hedvig Letters Sans", sans-serif !important;
 }
-
 .cl-internal-b3fm6y {
   display: none !important;
+}
+
+.cl-avatarBox {
+  border: solid 2px #fff;
 }
