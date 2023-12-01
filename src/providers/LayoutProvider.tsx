@@ -12,11 +12,11 @@ import { UserButton } from "@clerk/nextjs";
 
 const LayoutProvider = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="bg-[#e0fbfc] h-screen lg:px-20 px-5">
+    <div className="bg-secondaryColor h-screen lg:px-20 px-5">
       <div className="flex justify-between items-center bg-[#3d5a80] p-4 shadow-xl">
         <h1 className="text-xl font-semibold text-[#ffffff]">EASY EVENTS</h1>
         <div className="flex gap-5 items-center">
-          <Dropdown size="sm">
+          <Dropdown size="sm" className="rounded-none">
             <DropdownTrigger>
               <Button
                 variant="bordered"

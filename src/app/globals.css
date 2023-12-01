@@ -12,3 +12,7 @@
 .cl-avatarBox {
   border: solid 2px #fff;
 }
+
+.cl-userButtonPopoverCard {
+  border-radius: 0;
+}

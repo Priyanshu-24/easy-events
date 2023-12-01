@@ -9,7 +9,14 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
-  theme: {},
+  theme: {
+    extend: {
+      colors: {
+        primaryColor: "#3d5a80",
+        secondaryColor: "#e0fbfc",
+      },
+    },
+  },
   plugins: [nextui()],
 };
 export default config;
